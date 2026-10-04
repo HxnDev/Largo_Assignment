@@ -5,6 +5,7 @@ import AwarenessCard from './AwarenessCard';
 import ChartCard from './ChartCard';
 import DashboardTabs from './DashboardTabs';
 import NewsCard from './NewsCard';
+import { GridIcon } from './Icons';
 import ProfileBar from './ProfileBar';
 import ScoreCard from './ScoreCard';
 import AppealPieChart from './charts/AppealPieChart';
@@ -22,8 +23,13 @@ export default function Dashboard() {
         <ProfileBar fieldingDate={fieldingDate} demographic={demographic}
           onDateChange={setFieldingDate} onDemographicChange={setDemographic} />
         <DashboardTabs />
-        <div className="view-controls" aria-hidden="true">
-          <span>Subscription details</span><span>⊞</span><strong>%</strong><span>#</span>
+        <div className="view-controls" aria-label="Display controls">
+          <button className="subscription-button" type="button">Subscription details</button>
+          <button className="grid-button" type="button" aria-label="Grid view"><GridIcon /></button>
+          <div className="view-toggle" role="group" aria-label="Value display">
+            <button className="active" type="button" aria-label="Show percentages">%</button>
+            <button type="button" aria-label="Show values">#</button>
+          </div>
         </div>
         <section className="summary-grid" aria-label="Celebrity scorecard summary">
           <ScoreCard /><AwarenessCard />
