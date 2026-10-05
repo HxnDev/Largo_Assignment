@@ -1,4 +1,4 @@
-import { DownloadIcon } from '../components/Icons';
+import { DownloadIcon } from '@/components/Icons';
 
 export default function ExportButton() {
   return (

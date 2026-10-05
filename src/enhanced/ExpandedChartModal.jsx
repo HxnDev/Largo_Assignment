@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { CloseIcon } from '../components/Icons';
+import { CloseIcon } from '@/components/Icons';
 
 export default function ExpandedChartModal({ title, children, onClose }) {
   const closeRef = useRef(null);

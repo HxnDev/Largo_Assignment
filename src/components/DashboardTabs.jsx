@@ -1,4 +1,4 @@
-import { tabs } from '../data/dashboardData';
+import { tabs } from '@/data/dashboardData';
 import TabButton from './TabButton';
 
 export default function DashboardTabs() {

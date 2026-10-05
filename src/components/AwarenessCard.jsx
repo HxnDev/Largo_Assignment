@@ -1,4 +1,4 @@
-import { awarenessCategories } from '../data/dashboardData';
+import { awarenessCategories } from '@/data/dashboardData';
 
 export default function AwarenessCard({ score = 60, categories = awarenessCategories }) {
   return (

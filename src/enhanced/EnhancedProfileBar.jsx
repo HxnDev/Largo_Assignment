@@ -1,7 +1,7 @@
 import { useId } from 'react';
-import { CalendarIcon, ChevronDownIcon, UsersIcon } from '../components/Icons';
-import CelebrityAvatar from '../components/CelebrityAvatar';
-import { demographics, fieldingDates } from '../data/enhancedDashboardData';
+import { CalendarIcon, ChevronDownIcon, UsersIcon } from '@/components/Icons';
+import CelebrityAvatar from '@/components/CelebrityAvatar';
+import { demographics, fieldingDates } from '@/data/enhancedDashboardData';
 import ExportButton from './ExportButton';
 
 export default function EnhancedProfileBar({ date, demographic, onDateChange, onDemographicChange }) {

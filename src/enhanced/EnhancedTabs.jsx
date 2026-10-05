@@ -1,5 +1,5 @@
-import { tabs } from '../data/dashboardData';
-import TabButton from '../components/TabButton';
+import { tabs } from '@/data/dashboardData';
+import TabButton from '@/components/TabButton';
 
 export default function EnhancedTabs() {
   return <nav className="enhanced-tabs" aria-label="Celebrity report sections">

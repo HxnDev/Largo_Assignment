@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { appealData } from '../../data/dashboardData';
+import { appealData } from '@/data/dashboardData';
 import ChartTooltip from './ChartTooltip';
 
 function CategoryTick({ x, y, payload, data }) {

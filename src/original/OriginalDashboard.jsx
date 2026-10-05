@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { newsItems } from '../data/dashboardData';
-import AppHeader from '../components/AppHeader';
-import AwarenessCard from '../components/AwarenessCard';
-import ChartCard from '../components/ChartCard';
-import DashboardTabs from '../components/DashboardTabs';
-import NewsCard from '../components/NewsCard';
-import { GridIcon } from '../components/Icons';
-import ProfileBar from '../components/ProfileBar';
-import ScoreCard from '../components/ScoreCard';
-import AppealPieChart from '../components/charts/AppealPieChart';
-import AttributesChart from '../components/charts/AttributesChart';
-import PowerFactorsChart from '../components/charts/PowerFactorsChart';
-import TotalAppealChart from '../components/charts/TotalAppealChart';
+import { newsItems } from '@/data/dashboardData';
+import AppHeader from '@/components/AppHeader';
+import AwarenessCard from '@/components/AwarenessCard';
+import ChartCard from '@/components/ChartCard';
+import DashboardTabs from '@/components/DashboardTabs';
+import NewsCard from '@/components/NewsCard';
+import { GridIcon } from '@/components/Icons';
+import ProfileBar from '@/components/ProfileBar';
+import ScoreCard from '@/components/ScoreCard';
+import AppealPieChart from '@/components/charts/AppealPieChart';
+import AttributesChart from '@/components/charts/AttributesChart';
+import PowerFactorsChart from '@/components/charts/PowerFactorsChart';
+import TotalAppealChart from '@/components/charts/TotalAppealChart';
 
 export default function OriginalDashboard({ versionSwitcher }) {
   const [fieldingDate, setFieldingDate] = useState('July 25, 2025');

@@ -1,5 +1,5 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import { appealPieData } from '../../data/dashboardData';
+import { appealPieData } from '@/data/dashboardData';
 import ChartTooltip from './ChartTooltip';
 
 export default function AppealPieChart({ data = appealPieData, interactive = false }) {

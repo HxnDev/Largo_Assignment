@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { powerFactorsData } from '../../data/dashboardData';
+import { powerFactorsData } from '@/data/dashboardData';
 import ChartTooltip from './ChartTooltip';
 
 export default function PowerFactorsChart({ data = powerFactorsData, interactive = false }) {

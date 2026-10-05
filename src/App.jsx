@@ -1,8 +1,8 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
-import VersionSwitcher from './components/VersionSwitcher';
-import OriginalDashboard from './original/OriginalDashboard';
+import VersionSwitcher from '@/components/VersionSwitcher';
+import OriginalDashboard from '@/original/OriginalDashboard';
 
-const EnhancedDashboard = lazy(() => import('./enhanced/EnhancedDashboard'));
+const EnhancedDashboard = lazy(() => import('@/enhanced/EnhancedDashboard'));
 
 function getInitialVersion() {
   return new URLSearchParams(window.location.search).get('version') === 'enhanced'

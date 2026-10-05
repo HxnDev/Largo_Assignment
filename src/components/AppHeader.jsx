@@ -1,4 +1,4 @@
-import largoLogo from '../assets/largo-logo.png';
+import largoLogo from '@/assets/largo-logo.png';
 
 export default function AppHeader() {
   return (

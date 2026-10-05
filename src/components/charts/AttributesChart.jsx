@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { attributeData } from '../../data/dashboardData';
+import { attributeData } from '@/data/dashboardData';
 import ChartTooltip from './ChartTooltip';
 
 export default function AttributesChart({ demographic, data = attributeData, interactive = false }) {
