@@ -1,6 +1,6 @@
 # Largo Dashboard Assignment
 
-A responsive implementation of the supplied Largo celebrity analytics dashboard, populated with dummy data.
+A responsive implementation of the supplied Largo celebrity analytics dashboard, populated with dummy data. It includes the requested original layout and a separately loaded enhanced version.
 
 ## Run locally
 
@@ -16,4 +16,13 @@ npm run dev
 - Recharts
 - Plain CSS
 
-The first implementation deliberately reproduces the original dashboard. An enhanced presentation can be added later without duplicating its data or chart components.
+## Versions
+
+- `?version=original` displays the supplied mock implementation with minimal behavior.
+- `?version=enhanced` displays the refined design with working filters, interactive charts, expanded chart dialogs, exports, and a downloadable celebrity one-sheet.
+
+The enhanced bundle is lazy-loaded so the original implementation remains a small, clear review target. Stable cards, charts, icons, and data structures are shared between both versions.
+
+## GitHub Pages
+
+The repository includes a GitHub Actions deployment workflow. In repository settings, select **Pages → Build and deployment → GitHub Actions**. The Vite base path is configured for `/Largo_Assignment/`.
