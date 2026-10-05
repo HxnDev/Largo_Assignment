@@ -43,7 +43,7 @@ export default function EnhancedDashboard({ version, onVersionChange }) {
             onDemographicChange={setDemographic} />
           <EnhancedTabs />
           <section className="enhanced-summary-grid" aria-label="Celebrity scorecard summary">
-            <ScoreCard score={dataset.score} />
+            <ScoreCard score={dataset.score} downloadEnabled />
             <AwarenessCard score={dataset.awareness} categories={dataset.awarenessCategories} />
             <div className="news-grid">{dataset.news.map((item) => <NewsCard item={item} key={item.title} />)}</div>
           </section>

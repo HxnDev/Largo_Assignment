@@ -1,6 +1,5 @@
 import { useId } from 'react';
 import CelebrityAvatar from './CelebrityAvatar';
-import { exportPdf } from '../utils/exportDashboard';
 
 export default function ProfileBar({ fieldingDate, demographic, onDateChange, onDemographicChange }) {
   const dateId = useId();
@@ -24,7 +23,7 @@ export default function ProfileBar({ fieldingDate, demographic, onDateChange, on
           <option value="total">Total</option><option value="male">Total males</option><option value="female">Total females</option>
         </select>
       </div>
-      <button className="export-button" type="button" onClick={exportPdf}>Export</button>
+      <button className="export-button not-implemented" type="button" aria-disabled="true" title="Available in enhanced version">Export</button>
     </section>
   );
 }
