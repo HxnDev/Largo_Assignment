@@ -1,16 +1,17 @@
 import { useId } from 'react';
 import { CalendarIcon, ChevronDownIcon, UsersIcon } from '../components/Icons';
+import CelebrityAvatar from '../components/CelebrityAvatar';
 import { demographics, fieldingDates } from '../data/enhancedDashboardData';
-import ExportMenu from './ExportMenu';
+import ExportButton from './ExportButton';
 
-export default function EnhancedProfileBar({ date, demographic, onDateChange, onDemographicChange, dataset, dashboardRef }) {
+export default function EnhancedProfileBar({ date, demographic, onDateChange, onDemographicChange }) {
   const dateId = useId();
   const demographicId = useId();
   return (
     <section className="enhanced-profile-bar" aria-label="Celebrity and report filters">
       <div className="celebrity-summary">
         <div className="celebrity-badge"><small>E-SCORE</small><strong>CELEBRITY</strong></div>
-        <div className="celebrity-avatar" role="img" aria-label="Brad Pitt portrait"><span>BP</span></div>
+        <CelebrityAvatar />
         <div><h1>Brad Pitt</h1><p>Film Personality - Actor</p></div>
       </div>
       <label className="enhanced-filter" htmlFor={dateId}>
@@ -25,7 +26,7 @@ export default function EnhancedProfileBar({ date, demographic, onDateChange, on
           {demographics.map((item) => <option value={item.value} key={item.value}>{item.label}</option>)}
         </select><ChevronDownIcon /></span>
       </label>
-      <ExportMenu dataset={dataset} dashboardRef={dashboardRef} />
+      <ExportButton />
     </section>
   );
 }

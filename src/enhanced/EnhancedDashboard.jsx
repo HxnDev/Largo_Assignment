@@ -36,11 +36,11 @@ export default function EnhancedDashboard({ version, onVersionChange }) {
   return (
     <div className="app enhanced-dashboard" ref={dashboardRef}>
       <AppHeader />
+      <div className="version-switcher-wrap"><VersionSwitcher version={version} onChange={onVersionChange} /></div>
       <div className="enhanced-container">
-        <VersionSwitcher version={version} onChange={onVersionChange} />
         <main id="main">
           <EnhancedProfileBar date={date} demographic={demographic} onDateChange={setDate}
-            onDemographicChange={setDemographic} dataset={dataset} dashboardRef={dashboardRef} />
+            onDemographicChange={setDemographic} />
           <EnhancedTabs />
           <section className="enhanced-summary-grid" aria-label="Celebrity scorecard summary">
             <ScoreCard score={dataset.score} />
@@ -48,10 +48,10 @@ export default function EnhancedDashboard({ version, onVersionChange }) {
             <div className="news-grid">{dataset.news.map((item) => <NewsCard item={item} key={item.title} />)}</div>
           </section>
           <section className="enhanced-charts-grid" aria-label="Interactive celebrity analytics charts">
-            <ChartCard title="Total Appeal" showInfo onMaximize={() => setExpandedChart('appeal')}>{chartFor('appeal')}</ChartCard>
-            <ChartCard title="Attributes" showInfo onMaximize={() => setExpandedChart('attributes')}>{chartFor('attributes')}</ChartCard>
-            <ChartCard title="Appeal" subtitle="Film Personality - Actor" showInfo onMaximize={() => setExpandedChart('pie')}>{chartFor('pie')}</ChartCard>
-            <ChartCard title="Power Factors™" showInfo onMaximize={() => setExpandedChart('power')}>{chartFor('power')}</ChartCard>
+            <ChartCard title="Total Appeal" onMaximize={() => setExpandedChart('appeal')}>{chartFor('appeal')}</ChartCard>
+            <ChartCard title="Attributes" onMaximize={() => setExpandedChart('attributes')}>{chartFor('attributes')}</ChartCard>
+            <ChartCard title="Appeal" subtitle="Film Personality - Actor" onMaximize={() => setExpandedChart('pie')}>{chartFor('pie')}</ChartCard>
+            <ChartCard title="Power Factors™" onMaximize={() => setExpandedChart('power')}>{chartFor('power')}</ChartCard>
           </section>
         </main>
       </div>

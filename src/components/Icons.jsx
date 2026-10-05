@@ -53,18 +53,6 @@ export function ChevronDownIcon({ size = 13 }) {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-export function FileIcon({ size = 15 }) {
-  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none"><path d="M4 1.75h5l3 3v9.5H4z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /><path d="M9 1.75v3h3" stroke="currentColor" strokeWidth="1.2" /></svg>;
-}
-
-export function ImageIcon({ size = 15 }) {
-  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none"><rect x="2" y="2.5" width="12" height="11" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><circle cx="5.2" cy="5.7" r="1.2" fill="currentColor" /><path d="m3.5 12 3.2-3.2 2.1 2 1.6-1.5 2.2 2.7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>;
-}
-
-export function TableIcon({ size = 15 }) {
-  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none"><rect x="2" y="2.5" width="12" height="11" rx="1" stroke="currentColor" strokeWidth="1.2" /><path d="M2 6h12M6 6v7.5M10 6v7.5" stroke="currentColor" strokeWidth="1.2" /></svg>;
-}
-
 export function CloseIcon({ size = 16 }) {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none"><path d="m3.5 3.5 9 9m0-9-9 9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /></svg>;
 }

@@ -25,11 +25,11 @@ export default function OriginalDashboard({ versionSwitcher }) {
           onDateChange={setFieldingDate} onDemographicChange={setDemographic} />
         <DashboardTabs />
         <div className="view-controls" aria-label="Display controls">
-          <button className="subscription-button" type="button">Subscription details</button>
-          <button className="grid-button" type="button" aria-label="Grid view"><GridIcon /></button>
+          <button className="subscription-button not-implemented" type="button" aria-disabled="true" data-tooltip="Yet to implement" title="Yet to implement">Subscription details</button>
+          <button className="grid-button not-implemented" type="button" aria-label="Grid view, yet to implement" aria-disabled="true" data-tooltip="Yet to implement" title="Yet to implement"><GridIcon /></button>
           <div className="view-toggle" role="group" aria-label="Value display">
-            <button className="active" type="button" aria-label="Show percentages">%</button>
-            <button type="button" aria-label="Show values">#</button>
+            <button className="active not-implemented" type="button" aria-label="Show percentages, yet to implement" aria-disabled="true" data-tooltip="Yet to implement" title="Yet to implement">%</button>
+            <button className="not-implemented" type="button" aria-label="Show values, yet to implement" aria-disabled="true" data-tooltip="Yet to implement" title="Yet to implement">#</button>
           </div>
         </div>
         <section className="summary-grid" aria-label="Celebrity scorecard summary">

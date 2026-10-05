@@ -56,14 +56,14 @@
     display: flex;
     align-items: center;
     margin-right: 52px;
-    color: #9ca0a8;
-    font-size: 25px;
     text-decoration: none;
   }
 
-  .logo-mark {
-    color: #c7192d;
-    font-weight: 700;
+  .logo img {
+    display: block;
+    width: 82px;
+    height: 39px;
+    object-fit: contain;
   }
 
   .primary-navigation {
@@ -79,6 +79,9 @@
     color: #6f7480;
     font-size: 13px;
     font-weight: 600;
+    padding: 0;
+    background: transparent;
+    border: 0;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -162,15 +165,6 @@ body {
 
 .logo {
   margin-right: 54px;
-  font-size: 23px;
-  font-weight: 300;
-}
-
-.logo-mark {
-  display: inline-block;
-  margin-right: 1px;
-  transform: skew(-5deg);
-  font-size: 25px;
 }
 
 .primary-navigation {
@@ -242,25 +236,14 @@ body {
 }
 
 .celebrity-avatar {
-  display: grid;
-  place-items: end center;
+  display: block;
   width: 40px;
   height: 40px;
   flex: 0 0 auto;
-  overflow: hidden;
-  color: #fff;
-  background:
-    radial-gradient(circle at 50% 30%, #e6bf9b 0 15%, transparent 16%),
-    radial-gradient(ellipse at 50% 64%, #111827 0 33%, transparent 34%),
-    linear-gradient(145deg, #ddd 0 48%, #7f9cb7 49% 100%);
   border-radius: 50%;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 8%);
-}
-
-.celebrity-avatar span {
-  margin-bottom: 3px;
-  font-size: 7px;
-  font-weight: 700;
+  object-fit: cover;
+  object-position: 50% 22%;
 }
 
 .celebrity-summary h1 {
@@ -331,6 +314,10 @@ body {
   min-height: 34px;
   padding: 0 13px;
   border-right: 1px solid #c9cdd2;
+  background: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
   color: #2f3540;
   font-size: 11px;
   white-space: nowrap;
@@ -458,86 +445,48 @@ body {
   font-size: 13px;
 }
 
-.version-switcher {
+.version-switch-button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
-  min-height: 58px;
-}
-
-.version-options {
-  display: grid;
-  grid-template-columns: repeat(2, 230px);
-  padding: 2px;
-  background: rgb(255 255 255 / 88%);
-  border: 1px solid #e4e8ee;
-  border-radius: 30px;
-}
-
-.version-options button {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  min-height: 48px;
-  padding: 6px 22px;
-  color: #293451;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 26px;
-  text-align: left;
+  gap: 6px;
+  min-height: 34px;
+  padding: 4px 12px;
+  color: #bd1730;
+  background: #fff7f8;
+  border: 1px solid #efb8c0;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgb(32 49 77 / 8%);
   cursor: pointer;
 }
 
-.version-options button.active {
-  color: #bd1730;
-  background: #fff1f3;
-  border-color: #f2a9b4;
+.version-switch-button strong {
+  font-size: 10px;
 }
 
-.version-options button span { display: grid; gap: 2px; }
-.version-options strong { font-size: 13px; }
-.version-options small { color: #778198; font-size: 10px; }
-.version-switcher > p { margin: 0; color: #68738a; font-size: 10px; line-height: 1.45; }
-.version-switcher > p span { margin-right: 8px; color: #34405e; font-size: 14px; }
-
-.original-dashboard .version-switcher-wrap {
+.version-switcher-wrap {
   position: fixed;
   top: 6px;
   right: max(74px, calc((100vw - 988px) / 2 + 50px));
   z-index: 30;
 }
 
-.original-dashboard .version-switcher {
-  min-height: 38px;
+.not-implemented {
+  cursor: not-allowed !important;
 }
 
-.original-dashboard .version-options {
-  display: block;
-  padding: 0;
-  border: 0;
-  box-shadow: none;
-}
+@media print {
+  .site-header,
+  .version-switcher-wrap,
+  .dashboard-tabs,
+  .view-controls,
+  .export-button {
+    display: none !important;
+  }
 
-.original-dashboard .version-options button:first-child,
-.original-dashboard .version-switcher > p {
-  display: none;
-}
-
-.original-dashboard .version-options button:last-child {
-  min-height: 34px;
-  padding: 4px 12px;
-  background: #fff7f8;
-  border-color: #efb8c0;
-}
-
-.original-dashboard .version-options button:last-child svg,
-.original-dashboard .version-options button:last-child small {
-  display: none;
-}
-
-.original-dashboard .version-options button:last-child strong {
-  font-size: 10px;
+  .dashboard-container {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .score-card a {
@@ -869,7 +818,7 @@ body {
     margin-top: 16px;
   }
 
-  .original-dashboard .version-switcher-wrap {
+  .version-switcher-wrap {
     position: static;
     display: flex;
     justify-content: flex-end;
