@@ -9,8 +9,6 @@ npm ci
 npm run dev
 ```
 
-Run the focused data tests with `npm test`.
-
 ## Technology
 
 - React
