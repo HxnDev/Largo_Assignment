@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 import AppHeader from '../components/AppHeader';
 import AwarenessCard from '../components/AwarenessCard';
 import ChartCard from '../components/ChartCard';
@@ -23,7 +23,6 @@ export default function EnhancedDashboard({ version, onVersionChange }) {
   const [date, setDate] = useState('2025-07-25');
   const [demographic, setDemographic] = useState('male');
   const [expandedChart, setExpandedChart] = useState(null);
-  const dashboardRef = useRef(null);
   const dataset = useMemo(() => getEnhancedDataset(date, demographic), [date, demographic]);
 
   const chartFor = (key) => ({
@@ -34,7 +33,7 @@ export default function EnhancedDashboard({ version, onVersionChange }) {
   })[key];
 
   return (
-    <div className="app enhanced-dashboard" ref={dashboardRef}>
+    <div className="app enhanced-dashboard">
       <AppHeader />
       <div className="version-switcher-wrap"><VersionSwitcher version={version} onChange={onVersionChange} /></div>
       <div className="enhanced-container">

@@ -5,7 +5,6 @@ export default function TabButton({ active = false, className = '', children }) 
       type="button"
       aria-current={active ? 'page' : undefined}
       aria-disabled={active ? undefined : true}
-      data-tooltip={active ? undefined : 'Yet to implement'}
       title={active ? undefined : 'Yet to implement'}
     >
       {children}

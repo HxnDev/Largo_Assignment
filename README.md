@@ -5,7 +5,7 @@ A responsive implementation of the supplied Largo celebrity analytics dashboard,
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -19,7 +19,7 @@ npm run dev
 ## Versions
 
 - `?version=original` displays the supplied mock implementation with minimal behavior.
-- `?version=enhanced` displays the refined design with working filters, interactive charts, expanded chart dialogs, exports, and a downloadable celebrity one-sheet.
+- `?version=enhanced` displays the refined design with working filters, interactive charts, expanded chart dialogs, one-click PDF export, and a downloadable celebrity one-sheet.
 
 The enhanced bundle is lazy-loaded so the original implementation remains a small, clear review target. Stable cards, charts, icons, and data structures are shared between both versions.
 

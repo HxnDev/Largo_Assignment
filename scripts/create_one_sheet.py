@@ -1,5 +1,4 @@
 from pathlib import Path
-from shutil import copyfile
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
@@ -7,8 +6,7 @@ from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output" / "pdf" / "brad-pitt-one-sheet.pdf"
-PUBLIC_COPY = ROOT / "public" / "documents" / "brad-pitt-one-sheet.pdf"
+OUTPUT = ROOT / "public" / "documents" / "brad-pitt-one-sheet.pdf"
 RED = colors.HexColor("#C7192D")
 INK = colors.HexColor("#17213B")
 MUTED = colors.HexColor("#6C768A")
@@ -33,7 +31,6 @@ def draw_bar(pdf, x, y, width, value, color, title):
 
 def create_pdf():
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    PUBLIC_COPY.parent.mkdir(parents=True, exist_ok=True)
     width, height = A4
     pdf = canvas.Canvas(str(OUTPUT), pagesize=A4)
     pdf.setTitle("Brad Pitt Celebrity One-Sheet")
@@ -120,7 +117,6 @@ def create_pdf():
 
     pdf.showPage()
     pdf.save()
-    copyfile(OUTPUT, PUBLIC_COPY)
 
 
 if __name__ == "__main__":
