@@ -1,12 +1,15 @@
 import { MaximizeIcon, MoreIcon } from './Icons';
 
-export default function ChartCard({ title, subtitle, children }) {
+export default function ChartCard({ title, subtitle, children, onMaximize, showInfo = false }) {
   return (
     <article className="chart-card">
       <header className="chart-card-header">
-        <div><h2>{title}</h2>{subtitle ? <p>{subtitle}</p> : null}</div>
-        <div className="chart-actions" aria-hidden="true">
-          <span><MoreIcon /></span><span><MaximizeIcon /></span>
+        <div><h2>{title}{showInfo ? <span className="info-icon" aria-label={`${title} information`}>i</span> : null}</h2>{subtitle ? <p>{subtitle}</p> : null}</div>
+        <div className="chart-actions">
+          <span aria-hidden="true"><MoreIcon /></span>
+          {onMaximize ? (
+            <button type="button" onClick={onMaximize} aria-label={`Expand ${title}`}><MaximizeIcon /></button>
+          ) : <span aria-hidden="true"><MaximizeIcon /></span>}
         </div>
       </header>
       <div className="chart-content">{children}</div>

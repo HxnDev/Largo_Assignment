@@ -433,9 +433,11 @@ body {
   line-height: 1;
 }
 
-.score-card button {
+.score-card button,
+.score-card .one-sheet-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   padding: 6px 10px;
   color: #30343b;
@@ -444,7 +446,98 @@ body {
   border-radius: 3px;
   font-size: 9px;
   font-weight: 700;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.version-loading {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: #5d6675;
+  font-size: 13px;
+}
+
+.version-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 58px;
+}
+
+.version-options {
+  display: grid;
+  grid-template-columns: repeat(2, 230px);
+  padding: 2px;
+  background: rgb(255 255 255 / 88%);
+  border: 1px solid #e4e8ee;
+  border-radius: 30px;
+}
+
+.version-options button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 48px;
+  padding: 6px 22px;
+  color: #293451;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 26px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.version-options button.active {
+  color: #bd1730;
+  background: #fff1f3;
+  border-color: #f2a9b4;
+}
+
+.version-options button span { display: grid; gap: 2px; }
+.version-options strong { font-size: 13px; }
+.version-options small { color: #778198; font-size: 10px; }
+.version-switcher > p { margin: 0; color: #68738a; font-size: 10px; line-height: 1.45; }
+.version-switcher > p span { margin-right: 8px; color: #34405e; font-size: 14px; }
+
+.original-dashboard .version-switcher-wrap {
+  position: fixed;
+  top: 6px;
+  right: max(74px, calc((100vw - 988px) / 2 + 50px));
+  z-index: 30;
+}
+
+.original-dashboard .version-switcher {
+  min-height: 38px;
+}
+
+.original-dashboard .version-options {
+  display: block;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.original-dashboard .version-options button:first-child,
+.original-dashboard .version-switcher > p {
+  display: none;
+}
+
+.original-dashboard .version-options button:last-child {
+  min-height: 34px;
+  padding: 4px 12px;
+  background: #fff7f8;
+  border-color: #efb8c0;
+}
+
+.original-dashboard .version-options button:last-child svg,
+.original-dashboard .version-options button:last-child small {
+  display: none;
+}
+
+.original-dashboard .version-options button:last-child strong {
+  font-size: 10px;
 }
 
 .score-card a {
@@ -774,6 +867,13 @@ body {
   .dashboard-container {
     width: min(100% - 20px, 520px);
     margin-top: 16px;
+  }
+
+  .original-dashboard .version-switcher-wrap {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 10px 0;
   }
 
   .profile-bar,

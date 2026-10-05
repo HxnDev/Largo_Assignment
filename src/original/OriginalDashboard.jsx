@@ -1,24 +1,25 @@
 import { useState } from 'react';
 import { newsItems } from '../data/dashboardData';
-import AppHeader from './AppHeader';
-import AwarenessCard from './AwarenessCard';
-import ChartCard from './ChartCard';
-import DashboardTabs from './DashboardTabs';
-import NewsCard from './NewsCard';
-import { GridIcon } from './Icons';
-import ProfileBar from './ProfileBar';
-import ScoreCard from './ScoreCard';
-import AppealPieChart from './charts/AppealPieChart';
-import AttributesChart from './charts/AttributesChart';
-import PowerFactorsChart from './charts/PowerFactorsChart';
-import TotalAppealChart from './charts/TotalAppealChart';
+import AppHeader from '../components/AppHeader';
+import AwarenessCard from '../components/AwarenessCard';
+import ChartCard from '../components/ChartCard';
+import DashboardTabs from '../components/DashboardTabs';
+import NewsCard from '../components/NewsCard';
+import { GridIcon } from '../components/Icons';
+import ProfileBar from '../components/ProfileBar';
+import ScoreCard from '../components/ScoreCard';
+import AppealPieChart from '../components/charts/AppealPieChart';
+import AttributesChart from '../components/charts/AttributesChart';
+import PowerFactorsChart from '../components/charts/PowerFactorsChart';
+import TotalAppealChart from '../components/charts/TotalAppealChart';
 
-export default function Dashboard() {
+export default function OriginalDashboard({ versionSwitcher }) {
   const [fieldingDate, setFieldingDate] = useState('July 25, 2025');
   const [demographic, setDemographic] = useState('male');
   return (
-    <div className="app">
+    <div className="app original-dashboard">
       <AppHeader />
+      <div className="version-switcher-wrap">{versionSwitcher}</div>
       <main className="dashboard-container" id="main">
         <ProfileBar fieldingDate={fieldingDate} demographic={demographic}
           onDateChange={setFieldingDate} onDemographicChange={setDemographic} />
