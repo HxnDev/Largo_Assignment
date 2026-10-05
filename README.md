@@ -9,6 +9,8 @@ npm ci
 npm run dev
 ```
 
+Run the focused data tests with `npm test`.
+
 ## Technology
 
 - React
@@ -22,6 +24,8 @@ npm run dev
 - `?version=enhanced` displays the refined design with working filters, interactive charts, expanded chart dialogs, one-click PDF export, and a downloadable celebrity one-sheet.
 
 The enhanced bundle is lazy-loaded so the original implementation remains a small, clear review target. Stable cards, charts, icons, and data structures are shared between both versions.
+
+The celebrity one-sheet is a pre-generated static PDF in `public/documents`. Clicking the enhanced download button serves that existing file; the app does not generate PDFs at runtime.
 
 ## GitHub Pages
 
